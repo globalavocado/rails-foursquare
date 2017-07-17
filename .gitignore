@@ -19,7 +19,7 @@
 .byebug_history
 
 # Secret keys
-config/secrets.yml
+config/secrets*
 
 # Mac-specific
 .DS_Store
@@ -29,3 +29,6 @@ config/secrets.yml
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Ignore application configuration
+/config/application.yml
