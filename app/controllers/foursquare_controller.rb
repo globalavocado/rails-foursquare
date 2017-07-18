@@ -1,0 +1,12 @@
+class FoursquareController < ApplicationController
+
+	def index
+		
+		client = Foursquare2::Client.new(client_id: ENV['foursquare_api_id'], client_secret: ENV['foursquare_api_secret'], api_version: '20170623')
+
+		@cafes = client.search_venues(near: 'EC1',  section: 'coffee')
+
+
+	end
+
+end
