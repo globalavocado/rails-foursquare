@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+	<body>
+		<div class="container-fluid outerdiv" >
+	     
+	    <nav class="navbar navbar-inverse navbar-fixed-top">
+	        <div class="container-fluid">
+	          <div class="navbar-header">
+	            <!-- page title goes here -->
+	          </div>
+	        </div>
+	    </nav>
+
+	    <noscript>
+	        <div class="nojs">Javascript is either disabled or not supported in your browser. Please enable it or use a Javascript enabled browser.</div>
+	    </noscript>
+
+      	<div class="input-group search-bar">
+      		<!-- search box goes here -->
+		</div>
+
+	  	<div class="results-container">
+	  		<p>The closest coffee shop is <strong><%= @cafes.venues.first.name %></strong>.</p>
+
+    		<span class="span-outer">
+          <strong> <%= @cafes.venues.size %></strong> coffee shops in <strong><%= @cafes.geocode.feature.displayName %></strong>:
+        </span>
+          
+        <br />
+
+    	   <ul>
+	    		<% @cafes.venues.each do |cafe| %>
+
+	    		<li>
+		            <strong><%= cafe.name %></strong><br />
+		            <%= cafe.location.address %><br />
+		             <%= cafe.location.postalCode %><br />
+		             <%= cafe.location.lat %><br />
+					 <%= cafe.location.lng %>
+	          	</li>
+
+	          <% end %>
+    		</ul>
+	  	</div>
+
+		<div class="container-fluid">
+   			<!-- map goes here -->
+      	</div>
+
+      </div>
+  
+  </body>
+</html>

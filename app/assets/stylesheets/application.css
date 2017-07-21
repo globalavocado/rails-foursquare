@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+body {
+/*  background: url(../images/bg-sky.png);
+  background-repeat: repeat !important;
+  background-attachment: fixed;*/
+}
+
+.nojs {
+  padding:2px;
+  padding-left:6px;
+  margin-bottom:5px;
+  background:#ff0000;
+  color:#ffffff;
+  font-size:15px;
+  border:1px solid #ff0000;
+  border-radius:5px;
+}
+
+.outerdiv {
+  margin-top:60px;
+}
+
+.span-style {
+  font-size:17px;
+}
+
+.search-bar {
+  width:100%;
+  max-width:500px;
+  margin-bottom: 25px;
+}
+
+.bar-style {
+  background: #337AB7;
+  color: rgb(250,250,250);
+}
+
+.span-outer {
+  font-size:20px;
+}
+
+.outer-p {
+  margin-top: 10px;
+}
+
+.inner-p {
+  margin:2px;
+}
+
+.outer-p-2 {
+  margin-top: 5px;
+}
+
+.outer-p-3 {
+  margin-top: 15px;
+}
+
+.divider{
+  margin: 0 8px 0 8px;
+}
+
+.divider:before {
+  content: "|";
+}
+
+.results-container {
+  float: left;
+  width: 40%;
+  margin-left: 5px;
+  padding: 1em;
+  margin-top: 1px;
+}
+
+#coffeemap {
+  width: 50%; 
+  height: 480px;
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 1.2rem;
+}
