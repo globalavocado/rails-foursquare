@@ -19,6 +19,11 @@ RSpec.describe FoursquareController do
 			expect(response).to have_http_status('200')
 		end
 
+		it 'should return http status code 400' do
+			response = get :index, params: { query: query }
+			expect(response).to have_http_status('400')
+		end
+
 	end
 
 end
